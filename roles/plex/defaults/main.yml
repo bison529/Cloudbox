@@ -66,13 +66,14 @@ plex_docker_ports: "{{ (web_tools_ports + plex_main_ports) if (plex.open_main_po
 
 plex_docker_volumes:
   - "/etc/localtime:/etc/localtime:ro"
+  - "/opt/plex/Fonts:/usr/lib/plexmediaserver/Resources/Fonts"
   - "/opt/plex:/config"
   - "/opt/scripts:/scripts"
   - "/mnt/unionfs/Media:/data"
   - "/mnt:/mnt"
   - "/tmp:/tmp"
   - "/dev/shm:/dev/shm"
-  - "{{ plex.transcodes }}/plex:/transcode"
+  - "/dev/shm:/transcode"
 
 ################################
 # Docker Hosts
