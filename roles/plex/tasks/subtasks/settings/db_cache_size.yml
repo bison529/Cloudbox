@@ -24,7 +24,7 @@
 
 - name: Settings | DB Cache Size | Set 'default_db_cache_size' variable
   set_fact:
-    default_db_cache_size: '2000'
+    default_db_cache_size: '2000000'
 
 - name: Settings | DB Cache Size | Check if 'plex.db_cache_size' was specified
   set_fact:
